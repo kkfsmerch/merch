@@ -32,16 +32,15 @@ googleLogin.addEventListener("click", async () => {
     const docSnap = await getDoc(userRef);
     if (!docSnap.exists()) {
       await setDoc(userRef, {
-        uid: user.uid,
-        email: user.email,
         displayName: user.displayName,
+        email: user.email,
         shoppingCart: [],
         price: 0
       });
     }
 
     // Redirect to main page
-    window.location.href = "index.html";
+    window.location.href = "main.html";
   } catch (error) {
     console.error("Login error:", error);
   }
