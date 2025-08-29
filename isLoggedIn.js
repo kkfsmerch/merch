@@ -20,7 +20,7 @@ const analytics = getAnalytics(app);
 onAuthStateChanged(auth, (user) => {
   const loginPage = document.getElementById("LoginPage");
   if (user) {
-    window.location.href = "index.html"; // already logged in
+    window.location.href = "main.html"; // already logged in
   } else {
     loginPage.style.display = "block"; // show login page
   }
